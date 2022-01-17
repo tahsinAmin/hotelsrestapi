@@ -7,9 +7,13 @@ https://www.youtube.com/watch?v=x5Z-5kQNtyA&list=PLx-q4INfd95FIt5v6Pza6HjUwtK7sO
 - [ ] Must use OpenAPI standard with JSON responses
 - [ ] Able to search by title, amenities, price, location
 - [ ] I can sort by price
-- [ ] Must use JWT Token
+- [x] Must use JWT Token
 
 # Subtasks
+
+- [x] Login User
+- [x] Data created inside
+- [] Retrieve each data with id
 
 - [ ] Make the login post to something which won't need the post feature for authorization.
 - [ ] Make it postgreSQL.
