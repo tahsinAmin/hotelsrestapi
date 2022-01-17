@@ -3,6 +3,7 @@ from src.constants.http_status_codes import HTTP_200_OK, HTTP_201_CREATED, HTTP_
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask_jwt_extended import jwt_required, create_access_token, create_refresh_token, get_jwt_identity
 from src.database import User, db
+from flasgger import swag_from
 
 auth = Blueprint("auth", __name__, url_prefix='/api/v1/auth')
 
@@ -40,6 +41,7 @@ def register():
     }), HTTP_201_CREATED
 
 @auth.post('/login')
+@swag_from('./docs/auth/login.yaml')
 def login():
     username = request.json.get('username', '')
     password = request.json.get('password', '')

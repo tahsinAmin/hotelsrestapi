@@ -3,13 +3,13 @@ https://www.youtube.com/watch?v=x5Z-5kQNtyA&list=PLx-q4INfd95FIt5v6Pza6HjUwtK7sO
 # Project Requirements
 
 - [x] Use flask
-- [ ] Using GET method
+- [x] Using GET method
 - [ ] Must use OpenAPI standard with JSON responses
 - [ ] Able to search by title, amenities, price, location
 - [x] I can sort by price
 - [x] Must use JWT Token
 
-# Links
+# Links (Postman needed)
 
 ## Show Data (GET)
 
@@ -36,7 +36,10 @@ http://127.0.0.1:5000/api/v1/hotels/sort
 - [x] Retrieve hotel info with id
 - [x] Sort by price
 - [x] Search by titles & amenities. (Rest for Swagger UI)
+- [ ] Adding Swagger UI
 
+- [ ] How to use sql in sqlalchemy
+- [ ] Comment the Resgister part in auth
 - [ ] Make the login post to something which won't need the post feature for authorization.
 - [ ] Make it postgreSQL.
 - [ ] See how Marshmallow library can help.
@@ -85,3 +88,7 @@ http://127.0.0.1:5000/api/v1/hotels/sort
 #8
 
 - pip install flask-jwt-extended
+
+#19
+
+- pip install flasgger
