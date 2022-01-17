@@ -18,13 +18,13 @@ git clone https://github.com/tahsinAmin/hotelsrestapi.git
 3. flask run
 ```
 
-Then (Click here)[http://127.0.0.1:5000/]
+Then [Click here](http://127.0.0.1:5000/)
 
 ## Project Requirements
 
 - [x] Use flask
 - [x] Using GET method
-- [ ] Must use OpenAPI standard with JSON responses
+- [x] Must use OpenAPI standard with JSON responses
 - [ ] Able to search by title, amenities, price, location
 - [x] I can sort by price
 - [x] Must use JWT Token
@@ -55,7 +55,7 @@ http://127.0.0.1:5000/api/v1/hotels/sort
 - [x] Data created inside
 - [x] Retrieve hotel info with id
 - [x] Sort by price
-- [x] Search by titles & amenities. (Rest for Swagger UI)
+- [ ] Search by titles & amenities. (Rest for Swagger UI)
 - [x] Adding Swagger UI
 
 - [ ] How to use sql in sqlalchemy
@@ -81,8 +81,8 @@ http://127.0.0.1:5000/api/v1/hotels/sort
 
 - Failed to find Flask application or factory in module "flaskr". Use """FLASK\*APP=flaskr:name""" to specify one. (Sol) write "return app" at the end inside the creat*app class which is inside"""* _init_ \_.py"""
 
-- (Unable to install "<PACKAGE>": snap "<PACKAGE>" has "install-snap" change in progress.)[https://askubuntu.com/questions/1029117/unable-to-install-package-snap-package-has-install-snap-change-in-pro]
+- [Unable to install "<PACKAGE>": snap "<PACKAGE>" has "install-snap" change in progress.](https://askubuntu.com/questions/1029117/unable-to-install-package-snap-package-has-install-snap-change-in-pro)
 
-- (How to fix "ModuleNotFoundError: No module named 'validators'")[https://copypaste.guru/WhereIsMyPythonModule/how-to-fix-modulenotfounderror-no-module-named-validators]
+- [How to fix "ModuleNotFoundError: No module named 'validators'"](https://copypaste.guru/WhereIsMyPythonModule/how-to-fix-modulenotfounderror-no-module-named-validators)
 
 - Postman stopped working. Postman web app worked. Later created an account to work correctly.

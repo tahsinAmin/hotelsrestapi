@@ -1,4 +1,4 @@
-GET stats about hotels
+GET hotels by title
 ---
 tags:
   - Hotels
@@ -8,9 +8,19 @@ parameters:
     name: Authorization
     required: true
 
+paths:
+  /api/v1/hotels:
+  post:
+    parameters:
+      name: key
+      in: query,
+      description: key
+      required: true
+      type: string
+
 responses:
   200:
-    description: Hotel stats
+    description: All related hotels to the given in the searchbar
 
   404:
     description: Fails to get items due to authentication error

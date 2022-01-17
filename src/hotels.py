@@ -102,6 +102,7 @@ def sort_hotel():
 
 @hotels.get("/<string:search_sth>")
 @jwt_required()
+@swag_from('./docs/hotels/each.yaml')
 def get_hotel_by_name(search_sth):
     current_user = get_jwt_identity()
 

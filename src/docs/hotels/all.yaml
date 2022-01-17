@@ -1,4 +1,4 @@
-GET stats about hotels
+GET all hotels
 ---
 tags:
   - Hotels
