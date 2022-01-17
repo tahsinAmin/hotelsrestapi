@@ -26,6 +26,8 @@ https://www.youtube.com/watch?v=x5Z-5kQNtyA&list=PLx-q4INfd95FIt5v6Pza6HjUwtK7sO
 
 - BLUEPRINTS ARE MEANT TO GROUP RELATED DFUNCTIONALITY. Blueprint will have code that are related to each other.
 
+- Need to hit "pip freeze > requirements.txt" command everytime we finish our code at the end of the day.
+
 # ERRORS & Solution (Optional)
 
 - Failed to find Flask application or factory in module "flaskr". Use """FLASK\*APP=flaskr:name""" to specify one. (Sol) write "return app" at the end inside the creat*app class which is inside"""* _init_ \_.py"""
@@ -33,6 +35,8 @@ https://www.youtube.com/watch?v=x5Z-5kQNtyA&list=PLx-q4INfd95FIt5v6Pza6HjUwtK7sO
 - (Unable to install "<PACKAGE>": snap "<PACKAGE>" has "install-snap" change in progress.)[https://askubuntu.com/questions/1029117/unable-to-install-package-snap-package-has-install-snap-change-in-pro]
 
 - (How to fix "ModuleNotFoundError: No module named 'validators'")[https://copypaste.guru/WhereIsMyPythonModule/how-to-fix-modulenotfounderror-no-module-named-validators]
+
+- Postman stopped working. Postman web app worked. Later created an account to work correctly.
 
 # Commands
 

@@ -1,5 +1,3 @@
-import email
-from os import access
 from flask import Blueprint, jsonify, request
 from src.constants.http_status_codes import HTTP_200_OK, HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_401_UNAUTHORIZED, HTTP_409_CONFLICT
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -8,6 +6,9 @@ from src.database import User, db
 
 auth = Blueprint("auth", __name__, url_prefix='/api/v1/auth')
 
+@auth.get('/greetings')
+def index():
+  return "<h1>Hello world</h1>"
 
 @auth.post('/register')
 def register():
@@ -17,8 +18,8 @@ def register():
     if len(username) < 2:
         return jsonify({'error':"Username is too short"}), HTTP_400_BAD_REQUEST
 
-    if not username.isalnum() or " " in username:
-      return jsonify({'error':"Username should be alphanumeric"}), HTTP_400_BAD_REQUEST
+    # if not username.isalnum() or " " in username:
+    #   return jsonify({'error':"Username should be alphanumeric"}), HTTP_400_BAD_REQUEST
 
     if User.query.filter_by(username=username).first() is not None:
         return jsonify({'error': "username is taken"}), HTTP_409_CONFLICT
@@ -62,6 +63,9 @@ def login():
       'error': "Wrong Credentials"
     }), HTTP_401_UNAUTHORIZED
     
+@auth.get('/hello')
+def hello():
+    return {"message":"hello"}
 
 @auth.get("/me")
 @jwt_required()
