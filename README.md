@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=x5Z-5kQNtyA&list=PLx-q4INfd95FIt5v6Pza6HjUwtK7sO
 - [ ] Using GET method
 - [ ] Must use OpenAPI standard with JSON responses
 - [ ] Able to search by title, amenities, price, location
-- [ ] I can sort by price
+- [x] I can sort by price
 - [x] Must use JWT Token
 
 # Links
@@ -23,7 +23,7 @@ http://127.0.0.1:5000/api/v1/hotels
 http://127.0.0.1:5000/api/v1/hotels/1
 ```
 
-## Sort by price
+## Sort by price (GET)
 
 ```
 http://127.0.0.1:5000/api/v1/hotels/sort
@@ -34,7 +34,8 @@ http://127.0.0.1:5000/api/v1/hotels/sort
 - [x] Login User
 - [x] Data created inside
 - [x] Retrieve hotel info with id
-- [ ] Sort by price
+- [x] Sort by price
+- [x] Search by titles & amenities. (Rest for Swagger UI)
 
 - [ ] Make the login post to something which won't need the post feature for authorization.
 - [ ] Make it postgreSQL.

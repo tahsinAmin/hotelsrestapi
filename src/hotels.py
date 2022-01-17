@@ -81,7 +81,7 @@ def get_hotel(id):
 @jwt_required()
 def sort_hotel():
     current_user = get_jwt_identity()
-    hotels = Hotel.query.filter_by(user_id=current_user)
+    hotels = Hotel.query.filter_by(user_id=current_user).order_by(Hotel.price)
     data = []
     for hotel in hotels:
           data.append({
@@ -93,10 +93,32 @@ def sort_hotel():
             'amenities':hotel.amenities,
             'image_link':hotel.image_link
           })
-    data.sort(key=lambda x: x.get('price'))
 
     return jsonify({'data': data}), HTTP_200_OK
 
+@hotels.get("/<string:search_sth>")
+@jwt_required()
+def get_hotel_by_name(search_sth):
+    current_user = get_jwt_identity()
+
+    hotels = Hotel.query.filter_by(user_id=current_user).filter(Hotel.title.ilike(f'%{search_sth}%')).all()
+
+    if not hotels:
+       hotels = Hotel.query.filter(Hotel.amenities.ilike(f'%{search_sth}%')).all()
+
+    data = []
+    for hotel in hotels:
+          data.append({
+            'id':hotel.id,
+            'title':hotel.title,
+            'price':hotel.price,
+            'review':hotel.review,
+            'location':hotel.location,
+            'amenities':hotel.amenities,
+            'image_link':hotel.image_link
+          })
+
+    return jsonify({'data': data}), HTTP_200_OK
 
 @hotels.get("/me")
 def me():
