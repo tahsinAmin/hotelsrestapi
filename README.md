@@ -1,7 +1,20 @@
+https://www.youtube.com/watch?v=x5Z-5kQNtyA&list=PLx-q4INfd95FIt5v6Pza6HjUwtK7sOXmN&index=10
+
+# Project Requirements
+
+- [x] Use flask
+- [ ] Using GET method
+- [ ] Must use OpenAPI standard with JSON responses
+- [ ] Able to search by title, amenities, price, location
+- [ ] I can sort by price
+- [ ] Must use JWT Token
+
 # Subtasks
 
 - [ ] Make the login post to something which won't need the post feature for authorization.
-- [ ] Make it postgreSQL
+- [ ] Make it postgreSQL.
+- [ ] See how Marshmallow library can help.
+- [ ] See how serialization and deserialization cxan help
 
 # What I learned
 
