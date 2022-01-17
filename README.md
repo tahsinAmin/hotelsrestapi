@@ -1,5 +1,6 @@
 # Subtasks
 
+- [ ] Make the login post to something which won't need the post feature for authorization.
 - [ ] Make it postgreSQL
 
 # What I learned
