@@ -36,7 +36,7 @@ http://127.0.0.1:5000/api/v1/hotels/sort
 - [x] Retrieve hotel info with id
 - [x] Sort by price
 - [x] Search by titles & amenities. (Rest for Swagger UI)
-- [ ] Adding Swagger UI
+- [x] Adding Swagger UI
 
 - [ ] How to use sql in sqlalchemy
 - [ ] Comment the Resgister part in auth
