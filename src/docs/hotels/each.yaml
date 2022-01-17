@@ -1,0 +1,16 @@
+GET stats about hotels
+---
+tags:
+  - Hotels
+
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+
+responses:
+  200:
+    description: Hotel stats
+
+  404:
+    description: Fails to get items due to authentication error

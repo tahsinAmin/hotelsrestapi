@@ -1,6 +1,26 @@
-https://www.youtube.com/watch?v=x5Z-5kQNtyA&list=PLx-q4INfd95FIt5v6Pza6HjUwtK7sOXmN&index=10
+# Hotel RestAPI With Swagger
 
-# Project Requirements
+This project was built using Flask Framework and SQLite
+
+## Installation
+
+Clone source code in you server using command in terminal (first verify git cli installation) or you can directly download scouce code
+
+```
+git clone https://github.com/tahsinAmin/hotelsrestapi.git
+```
+
+## Remaining Setup in the terminal
+
+```
+1. pip install -r requirements.txt
+2. source venv/bin/activate
+3. flask run
+```
+
+Then (Click here)[http://127.0.0.1:5000/]
+
+## Project Requirements
 
 - [x] Use flask
 - [x] Using GET method
@@ -9,11 +29,11 @@ https://www.youtube.com/watch?v=x5Z-5kQNtyA&list=PLx-q4INfd95FIt5v6Pza6HjUwtK7sO
 - [x] I can sort by price
 - [x] Must use JWT Token
 
-# Links (Postman needed)
+<!-- # Links (Postman needed) -->
 
-## Show Data (GET)
+<!-- ## Show Data (GET) -->
 
-```
+<!-- ```
 http://127.0.0.1:5000/api/v1/hotels
 ```
 
@@ -27,9 +47,9 @@ http://127.0.0.1:5000/api/v1/hotels/1
 
 ```
 http://127.0.0.1:5000/api/v1/hotels/sort
-```
+``` -->
 
-# Subtasks
+## Subtasks
 
 - [x] Login User
 - [x] Data created inside
@@ -45,7 +65,7 @@ http://127.0.0.1:5000/api/v1/hotels/sort
 - [ ] See how Marshmallow library can help.
 - [ ] See how serialization and deserialization cxan help
 
-# What I learned
+## What I learned
 
 - ".flaskenv" in order to configure the terminal examlpe, flask_env and flask_app
 
@@ -57,7 +77,7 @@ http://127.0.0.1:5000/api/v1/hotels/sort
 
 - Need to hit "pip freeze > requirements.txt" command everytime we finish our code at the end of the day.
 
-# ERRORS & Solution (Optional)
+## ERRORS & Solution (Optional)
 
 - Failed to find Flask application or factory in module "flaskr". Use """FLASK\*APP=flaskr:name""" to specify one. (Sol) write "return app" at the end inside the creat*app class which is inside"""* _init_ \_.py"""
 
@@ -66,29 +86,3 @@ http://127.0.0.1:5000/api/v1/hotels/sort
 - (How to fix "ModuleNotFoundError: No module named 'validators'")[https://copypaste.guru/WhereIsMyPythonModule/how-to-fix-modulenotfounderror-no-module-named-validators]
 
 - Postman stopped working. Postman web app worked. Later created an account to work correctly.
-
-# Commands
-
-#2
-
-- pip install flask
-
-#3
-
-- pip3 install python-dotenv
-
-#5
-
-- pip install -U Flask-SQLAlchemy
-
-#7
-
-- pip install validators
-
-#8
-
-- pip install flask-jwt-extended
-
-#19
-
-- pip install flasgger
