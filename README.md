@@ -9,11 +9,26 @@ https://www.youtube.com/watch?v=x5Z-5kQNtyA&list=PLx-q4INfd95FIt5v6Pza6HjUwtK7sO
 - [ ] I can sort by price
 - [x] Must use JWT Token
 
+# Links
+
+## Show Data (GET)
+
+```
+http://127.0.0.1:5000/api/v1/hotels
+```
+
+## Show 1 Hotel by id (GET)
+
+```
+http://127.0.0.1:5000/api/v1/hotels/1
+```
+
 # Subtasks
 
 - [x] Login User
 - [x] Data created inside
-- [] Retrieve each data with id
+- [x] Retrieve hotel info with id
+- [ ] Sort by price
 
 - [ ] Make the login post to something which won't need the post feature for authorization.
 - [ ] Make it postgreSQL.

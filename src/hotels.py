@@ -1,4 +1,4 @@
-from src.constants.http_status_codes import HTTP_200_OK, HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_409_CONFLICT
+from src.constants.http_status_codes import HTTP_200_OK, HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_404_NOT_FOUND, HTTP_409_CONFLICT
 from flask import Blueprint, request
 from flask.json import jsonify
 # import validators
@@ -57,6 +57,25 @@ def handle_hotels():
           })
 
         return jsonify({'data': data}), HTTP_200_OK
+
+@hotels.get("/<int:id>")
+@jwt_required()
+def get_hotel(id):
+  current_user = get_jwt_identity()
+  hotel = Hotel.query.filter_by(user_id=current_user, id=id).first()
+
+  if not hotel:
+     return jsonify({"message":"Hotel not found"}), HTTP_404_NOT_FOUND
+  
+  return jsonify({
+            'id':hotel.id,
+            'title':hotel.title,
+            'price':hotel.price,
+            'review':hotel.review,
+            'location':hotel.location,
+            'amenities':hotel.amenities,
+            'image_link':hotel.image_link
+          }), HTTP_200_OK
 
 @hotels.get("/me")
 def me():
