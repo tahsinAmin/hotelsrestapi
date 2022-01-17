@@ -23,6 +23,12 @@ http://127.0.0.1:5000/api/v1/hotels
 http://127.0.0.1:5000/api/v1/hotels/1
 ```
 
+## Sort by price
+
+```
+http://127.0.0.1:5000/api/v1/hotels/sort
+```
+
 # Subtasks
 
 - [x] Login User
