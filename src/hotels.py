@@ -9,44 +9,11 @@ from flasgger import swag_from
 hotels = Blueprint("hotels", __name__, url_prefix='/api/v1/hotels')
 
 
-# @hotels.route('/', methods=['POST', 'GET'])
 @hotels.get('/')
 @jwt_required()
 @swag_from('./docs/hotels/all.yaml')
 def handle_hotels():
     current_user = get_jwt_identity() # this gives us the id
-    # if request.method == 'POST':
-    #     title      = request.get_json().get('title', '')
-    #     price      = request.get_json().get('price', '')
-    #     review     = request.get_json().get('preview','')
-    #     location   = request.get_json().get('location','')
-    #     amenities  = request.get_json().get('amenities','')
-    #     image_link = request.get_json().get('image_link','')
-
-        # if not validators.title(title):
-        #     return jsonify({
-        #       "error": "Enter a valid url"
-        #     }), HTTP_400_BAD_REQUEST
-
-        # if Hotel.query.filter_by(title=title).first():
-        #     return jsonify({
-        #       "error": "Title already exist"
-        #     }), HTTP_409_CONFLICT
-
-        # hotel = Hotel(title=title, price=price, review=review, location=location, amenities=amenities, image_link=image_link, user_id=current_user)
-        # db.session.add(hotel)
-        # db.session.commit()
-
-        # return jsonify({
-        #   'id':hotel.id,
-        #   'title':hotel.title,
-        #   'price':hotel.price,
-        #   'review':hotel.review,
-        #   'location':hotel.location,
-        #   'amenities':hotel.amenities,
-        #   'image_link':hotel.image_link
-        # }), HTTP_201_CREATED
-    # else:
     hotels = Hotel.query.filter_by(user_id=current_user)
     data = []
     for hotel in hotels:
@@ -64,6 +31,7 @@ def handle_hotels():
 
 @hotels.get("/<int:id>")
 @jwt_required()
+@swag_from('./docs/hotels/byid.yaml')
 def get_hotel(id):
     current_user = get_jwt_identity()
     hotel = Hotel.query.filter_by(user_id=current_user, id=id).first()

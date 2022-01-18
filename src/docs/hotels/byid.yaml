@@ -1,0 +1,22 @@
+Get Hotel by Id
+---
+get:
+  tags: Book Request
+  summary: Get book request with given ID,
+  parameters:
+    - in: path,
+      name: id,
+      required: true,
+      description: Book Request id,
+      schema:
+      $ref: #/components/schemas/id
+
+  responses:
+    200:
+      description: OK,
+      schema:
+        $ref: #/components/schemas/bookRequest
+    400:
+      description: Failed. Misunderstood Request.
+    404:
+      description: Failed. Hotel request not found.
